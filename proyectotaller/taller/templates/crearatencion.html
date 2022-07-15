@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block titulo %} Agregar Atencion {% endblock %}
+{% block contenido %} 
+
+<div class="card">
+    <div class="card-header">
+        Crear una atencion
+    </div>
+    <div class="card-body">
+        <h4 class="card-title">Datos de la atencion</h4>
+    {% include 'formatencion.html' %}    
+    
+
+    </div>
+    <div class="card-footer text-muted">
+        
+    </div>
+</div>
+
+{% endblock %}

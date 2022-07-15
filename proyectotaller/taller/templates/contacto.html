@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block titulo %} nosotros {% endblock %}
+{% block contenido %} 
+{% load crispy_forms_tags %}
+
+<h2> Contactanos </h2>
+
+<form action="" class = "formulario_contacto" method="post">
+    {% csrf_token %}
+    {{form | crispy}}
+
+    <br>
+    <button type= submit id="btnEnviar" class="button">Enviar</button>    
+</form>
+{{mensaje}}
+<table id="tablacontacto">
+
+</table>
+
+
+
+
+{% endblock %}
