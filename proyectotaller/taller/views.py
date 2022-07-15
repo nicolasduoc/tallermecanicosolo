@@ -2,7 +2,14 @@ from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from .models import Atencion
 from .forms import AtencionForm, ContactoForm
+from rest_framework import viewsets
+from .serializers import AtencionSerializer
+
 # Create your views here.
+class AtencionViewset(viewsets.ModelViewSet):
+    queryset = Atencion.objects.all()
+    serializer_class = AtencionSerializer
+
 def inicio(request):
     return HttpResponse("<h1>Bienvenido amigos</h1>")
 
